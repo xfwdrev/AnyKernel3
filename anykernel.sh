@@ -35,4 +35,7 @@ if [ -f "split_img/ramdisk.cpio" ]; then
 else
     flash_boot
 fi
+
+flash_generic vendor_boot;
+flash_generic vendor_dlkm;
 ## end boot install
