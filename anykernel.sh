@@ -28,14 +28,7 @@ NO_MAGISK_CHECK=1;
 . tools/ak3-core.sh;
 
 # boot install
-split_boot
-if [ -f "split_img/ramdisk.cpio" ]; then
-    unpack_ramdisk
-    write_boot
-else
-    flash_boot
-fi
+dump_boot;
 
-flash_generic vendor_boot;
-flash_generic vendor_dlkm;
+write_boot;
 ## end boot install
